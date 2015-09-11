@@ -1,0 +1,58 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="horizontal"
+    android:background="#000000">
+
+    <FrameLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="265dp"
+            android:background="@drawable/landscape_background_bm" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:src="@drawable/exerc1_landscapelogo_resized"
+        />
+    </FrameLayout>
+        <TableRow
+            android:layout_marginTop="2dp" >
+
+        <Button
+            android:text="@string/button_register"
+            android:id="@+id/t1"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/borderbottom"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            />
+        <Button
+            android:text="@string/button_login"
+            android:id="@+id/t2"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/borderbottom"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            />
+        <Button
+            android:text="@string/button_about"
+            android:id="@+id/t3"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/borderbottom"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            />
+    </TableRow>
+</TableLayout>
