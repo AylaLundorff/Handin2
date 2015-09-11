@@ -10,7 +10,6 @@
     android:orientation="vertical"
     android:background="#000000" >
 
-    //test comment
 
     <TextView
         android:id="@+id/t5"
