@@ -48,4 +48,4 @@
         android:padding="7dp"
         android:background="@drawable/borderbottom"/>
 
-</ScrollView>
+</RelativeLayout>
