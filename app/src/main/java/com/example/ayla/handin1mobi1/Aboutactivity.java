@@ -14,18 +14,18 @@ public class Aboutactivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aboutactivity);
 
-        //Instantiate view
-        Button bv = (Button)findViewById(R.id.t4);
+//Instantiate view
+Button bv = (Button)findViewById(R.id.t4);
 
-        //Attatch view
-        bv.setOnClickListener(new View.OnClickListener() {
-            @Override
-        public void onClick(View v) {
+//Attatch view
+bv.setOnClickListener(new View.OnClickListener() {
+@Override
+public void onClick(View v) {
 
-                //close activity, and hop off stack
-                finish();
+        //close activity, and hop off stack
+        finish();
 
-            }
+        }
         });
-    }
-}
+        }
+        }

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ayla.handin1mobi1" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +14,6 @@
             android:label="Handin 2 MOBI1" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -24,6 +25,11 @@
             android:name=".ColorActivity"
             android:label="@string/title_activity_color" >
         </activity>
+        <activity
+            android:name=".WebviewActivity"
+            android:label="Webview">
+        </activity>
+
     </application>
 
 </manifest>

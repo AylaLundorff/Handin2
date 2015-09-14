@@ -31,7 +31,7 @@ public class ColorActivity extends AppCompatActivity {
         black_color.setOnClickListener(clickonbutton9);
 
 
-        //Get extras from Intent
+        /*//Get extras from Intent
         Bundle mybundle = getIntent().getExtras();
 
         //see if color is there
@@ -50,15 +50,24 @@ public class ColorActivity extends AppCompatActivity {
             finish();
 
         }
+
+        */
     }
 
     View.OnClickListener clickonbutton7 = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            //data to be delivered with intent to activity
-            int newColor = -1;
-            setContentView(R.layout.activity_main);
-            //Toast.makeText(this, "Choosen color is Gray:" + newColor, Toast.LENGTH_LONG).show();
+
+            boolean allwentwell = true;
+            if(allwentwell) {
+                Intent returnintent = new Intent();
+                returnintent.putExtra("returnvalue", "white");
+                setResult(RESULT_OK,returnintent);
+            }else {
+                Intent returnIntent = new Intent();
+                setResult(RESULT_CANCELED, returnIntent);
+            }
+            finish();
 
         }
     };
@@ -66,18 +75,32 @@ public class ColorActivity extends AppCompatActivity {
     View.OnClickListener clickonbutton8 = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            //data to be delivered with intent to activity
-            int newColor = -7829368;
-            //Toast.makeText(this, "Choosen color is Gray:" + newColor, Toast.LENGTH_LONG).show();
+            boolean allwentwell = true;
+            if (allwentwell) {
+                Intent returnintent = new Intent();
+                returnintent.putExtra("returnvalue", "gray");
+                setResult(RESULT_OK, returnintent);
+            } else {
+                Intent returnIntent = new Intent();
+                setResult(RESULT_CANCELED, returnIntent);
+            }
+            finish();
         }
     };
 
     View.OnClickListener clickonbutton9 = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            //data to be delivered with intent to activity
-            int newColor = -16777216;
-            //Toast.makeText(this, "Choosen color is Black:" + newColor, Toast.LENGTH_LONG).show();
+            boolean allwentwell = true;
+            if(allwentwell) {
+                Intent returnintent = new Intent();
+                returnintent.putExtra("returnvalue", "black");
+                setResult(RESULT_OK,returnintent);
+            }else {
+                Intent returnIntent = new Intent();
+                setResult(RESULT_CANCELED, returnIntent);
+            }
+            finish();
         }
     };
 }
