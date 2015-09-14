@@ -3,26 +3,32 @@ package com.example.ayla.handin1mobi1;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.internal.widget.TintImageView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button about_button;
+    private ImageView image_view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         //Instantiate views
         about_button = (Button) findViewById(R.id.t3);
+        image_view = (ImageView) findViewById(R.id.t6);
 
         //Attatch listener
         about_button.setOnClickListener(clickonbutton3);
+        image_view.setOnClickListener(clickonimagelogo);
 
     }
 
@@ -54,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(colorchangeintent);
         }
     };
+/*
     View.OnClickListener clickonimagelogo = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -80,5 +87,5 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }
-
+*/
     }
