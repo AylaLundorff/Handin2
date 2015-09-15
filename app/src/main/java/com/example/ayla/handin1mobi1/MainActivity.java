@@ -3,6 +3,7 @@ package com.example.ayla.handin1mobi1;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.internal.widget.TintImageView;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private Button about_button;
     private ImageView image_view;
     private Button login_button;
+    private Button sendemail_button;
     private LinearLayout mainlayout;
     private TableLayout mainlayoutland;
 
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         about_button = (Button) findViewById(R.id.t3);
         image_view = (ImageView) findViewById(R.id.t6);
         login_button = (Button) findViewById(R.id.t1);
+        sendemail_button = (Button) findViewById(R.id.t2);
         mainlayout = (LinearLayout) findViewById(R.id.mainlayout);
         mainlayoutland = (TableLayout) findViewById(R.id.mainlayoutland);
 
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         about_button.setOnClickListener(clickonbutton3);
         image_view.setOnClickListener(clickonimagelogo);
         login_button.setOnClickListener(clickonbutton1);
+        sendemail_button.setOnClickListener(clickonbutton2);
 
     }
 
@@ -60,6 +64,16 @@ public class MainActivity extends AppCompatActivity {
 
             //create explicit intent
             Intent webviewintent = new Intent(MainActivity.this, WebviewActivity.class);
+            startActivity(webviewintent);
+        }
+
+    };
+    View.OnClickListener clickonbutton2 = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+            //create explicit intent
+            Intent webviewintent = new Intent(MainActivity.this, SendEmailActivity.class);
             startActivity(webviewintent);
         }
 
@@ -89,38 +103,36 @@ public class MainActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {    //Check all went well in colorchange
 
                 //get result lige other example, and show with toast
-                  String returnvalue = data.getExtras().getString("returnvalue");
+                String returnvalue = data.getExtras().getString("returnvalue");
                 if (returnvalue.equals("white")) {
                     if (mainlayoutland != null) {
                         mainlayoutland.setBackgroundColor(Color.WHITE);
                     } else {
-                    mainlayout.setBackgroundColor(Color.WHITE);
+                        mainlayout.setBackgroundColor(Color.WHITE);
                     }
-                }
-                else if (returnvalue.equals("gray")) {
+                } else if (returnvalue.equals("gray")) {
                     if (mainlayoutland != null) {
                         mainlayoutland.setBackgroundColor(Color.GRAY);
                     } else {
                         mainlayout.setBackgroundColor(Color.GRAY);
                     }
-                }
-                else if (returnvalue.equals("black")) {
+                } else if (returnvalue.equals("black")) {
                     if (mainlayoutland != null) {
                         mainlayoutland.setBackgroundColor(Color.BLACK);
                     } else {
                         mainlayout.setBackgroundColor(Color.BLACK);
                     }
+                } else if (returnvalue.equals("picture")) {
+                    if (mainlayoutland != null) {
+                        mainlayoutland.setBackgroundResource(R.drawable.landscape_background_bm);
+                    } else {
+                        mainlayout.setBackgroundResource(R.drawable.landscape_background_bm_cropped);
+                    }
                 }
 
-              //  Toast.makeText(this, "were back", Toast.LENGTH_LONG).show();
+                //  Toast.makeText(this, "were back", Toast.LENGTH_LONG).show();
 
             }
         }
     }
-<<<<<<< HEAD
 }
-=======
-
-
-}
->>>>>>> 5e30b74f7008958d80b8eb7807d5ec603c37ee55

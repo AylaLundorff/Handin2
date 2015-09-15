@@ -16,6 +16,7 @@ public class ColorActivity extends AppCompatActivity {
     private Button white_color;
     private Button gray_color;
     private Button black_color;
+    private Button picture_color;
 
     //define sharedPreferences object
     private SharedPreferences savedColor;
@@ -29,12 +30,14 @@ public class ColorActivity extends AppCompatActivity {
         white_color = (Button) findViewById(R.id.t7);
         gray_color = (Button) findViewById(R.id.t8);
         black_color = (Button) findViewById(R.id.t9);
+        picture_color = (Button) findViewById(R.id.t11);
 
 
         //Attatch listener
         white_color.setOnClickListener(clickonbutton7);
         gray_color.setOnClickListener(clickonbutton8);
         black_color.setOnClickListener(clickonbutton9);
+        picture_color.setOnClickListener(clickonbutton11);
 
         //get SharedPreferences object
         savedColor = getSharedPreferences("SavedColor", MODE_PRIVATE);
@@ -90,7 +93,25 @@ public class ColorActivity extends AppCompatActivity {
             finish();
         }
     };
-}
+
+    View.OnClickListener clickonbutton11 = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+            boolean allwentwell = true;
+            if (allwentwell) {
+                Intent returnintent = new Intent();
+                returnintent.putExtra("returnvalue", "picture");
+                setResult(RESULT_OK, returnintent);
+            } else {
+                Intent returnIntent = new Intent();
+                setResult(RESULT_CANCELED, returnIntent);
+            }
+            finish();
+        }
+
+    };
+    }
 
        /*
     @Override
@@ -109,8 +130,6 @@ public class ColorActivity extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("saved color", MODE_PRIVATE);
         String color = prefs.getString("color", "---");
         returnvalue.setColor
-
-
 
 }
         /*

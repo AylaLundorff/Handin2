@@ -59,4 +59,17 @@
         android:background="#2c3539"
         android:layout_marginBottom="7dp"
         />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/t11"
+        android:text="@string/button_picture"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="7dp"
+        android:background="@drawable/buttonshape"
+        android:layout_marginBottom="7dp"
+        />
     </LinearLayout>

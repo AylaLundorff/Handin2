@@ -30,7 +30,7 @@
             android:label="Webview">
         </activity>
         <activity
-            android:name=".SendE-mailActivity"
+            android:name=".SendEmailActivity"
             android:label="Webview">
         </activity>
 

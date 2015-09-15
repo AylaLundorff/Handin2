@@ -14,7 +14,6 @@
 <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/emailbar"
         android:id="@+id/emailbar"
         android:text="@string/composeEmail"
         android:textSize="18sp"
