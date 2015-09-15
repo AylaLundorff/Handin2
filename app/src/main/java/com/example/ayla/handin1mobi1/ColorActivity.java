@@ -1,6 +1,8 @@
 package com.example.ayla.handin1mobi1;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,6 +17,9 @@ public class ColorActivity extends AppCompatActivity {
     private Button gray_color;
     private Button black_color;
 
+    //define sharedPreferences object
+    private SharedPreferences savedColor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,33 +30,15 @@ public class ColorActivity extends AppCompatActivity {
         gray_color = (Button) findViewById(R.id.t8);
         black_color = (Button) findViewById(R.id.t9);
 
+
         //Attatch listener
         white_color.setOnClickListener(clickonbutton7);
         gray_color.setOnClickListener(clickonbutton8);
         black_color.setOnClickListener(clickonbutton9);
 
+        //get SharedPreferences object
+        savedColor = getSharedPreferences("SavedColor", MODE_PRIVATE);
 
-        /*//Get extras from Intent
-        Bundle mybundle = getIntent().getExtras();
-
-        //see if color is there
-        if(mybundle!=null && mybundle.containsKey(MainActivity.CONSTANT_COLOR)) {
-
-            //Get color
-            int c = mybundle.getInt(MainActivity.CONSTANT_COLOR);
-
-            //show in Toast
-
-            Toast.makeText(this, "This is Aylas color:" + c, Toast.LENGTH_LONG).show();
-        }else {
-            Toast.makeText(this, "This is Chr. nicolor:", Toast.LENGTH_LONG).show();
-
-            //close activity, and hop off stack
-            finish();
-
-        }
-
-        */
     }
 
     View.OnClickListener clickonbutton7 = new View.OnClickListener() {
@@ -59,11 +46,11 @@ public class ColorActivity extends AppCompatActivity {
         public void onClick(View v) {
 
             boolean allwentwell = true;
-            if(allwentwell) {
+            if (allwentwell) {
                 Intent returnintent = new Intent();
                 returnintent.putExtra("returnvalue", "white");
-                setResult(RESULT_OK,returnintent);
-            }else {
+                setResult(RESULT_OK, returnintent);
+            } else {
                 Intent returnIntent = new Intent();
                 setResult(RESULT_CANCELED, returnIntent);
             }
@@ -88,15 +75,15 @@ public class ColorActivity extends AppCompatActivity {
         }
     };
 
-    View.OnClickListener clickonbutton9 = new View.OnClickListener() {
+    private View.OnClickListener clickonbutton9 = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             boolean allwentwell = true;
-            if(allwentwell) {
+            if (allwentwell) {
                 Intent returnintent = new Intent();
                 returnintent.putExtra("returnvalue", "black");
-                setResult(RESULT_OK,returnintent);
-            }else {
+                setResult(RESULT_OK, returnintent);
+            } else {
                 Intent returnIntent = new Intent();
                 setResult(RESULT_CANCELED, returnIntent);
             }
@@ -104,3 +91,43 @@ public class ColorActivity extends AppCompatActivity {
         }
     };
 }
+
+       /*
+    @Override
+    public void onPause() {
+        super.onPause();
+        // save the instance variables
+        SharedPreferences prefs = getSharedPreferences("savedColor", MODE_PRIVATE);
+        SharedPreferences.Editor edit = prefs.edit();
+        edit.putString("color", "returnvalue");
+        edit.apply();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        SharedPreferences prefs = getSharedPreferences("saved color", MODE_PRIVATE);
+        String color = prefs.getString("color", "---");
+        returnvalue.setColor
+
+
+
+}
+        /*
+        SharedPreferences.Editor editor = savedColor.edit();
+        editor.putInt ("white", white_color);
+        editor.putInt("gray", gray_color);
+        editor.putInt("black", black_color);
+        editor.apply();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        //get the instance variables
+        white_color = savedColor.getInt("white", white_color);
+        gray_color = savedColor.getInt("gray", gray_color);
+        black_color = savedColor.getInt("blue", black_color);
+    */
+
+

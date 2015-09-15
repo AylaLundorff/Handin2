@@ -2,7 +2,7 @@
     <string name="app_name">Handin 2 MOBI1</string>
 
     <string name="button_about">About</string>
-    <string name="button_login">Login</string>
+    <string name="button_login">Webview</string>
     <string name="button_register">Register</string>
     <string name="button_back">Back</string>
     <string name="abouttext">OnTime Tool is a mobile software solution created by Global Business Engineers
