@@ -36,8 +36,8 @@ android:layout_height="match_parent">
     android:textStyle="bold"
     android:gravity="center"
     android:padding="7dp"
-    android:layout_marginTop="30dp"
-    android:background="@drawable/borderbottom"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/buttonshape"
     />
 <Button
     android:layout_width="175dp"
@@ -50,7 +50,7 @@ android:layout_height="match_parent">
     android:textStyle="bold"
     android:gravity="center"
     android:padding="7dp"
-    android:background="@drawable/borderbottom"/>
+    android:background="@drawable/buttonshape"/>
 <Button
     android:layout_width="180dp"
     android:layout_height="wrap_content"
@@ -64,6 +64,6 @@ android:layout_height="match_parent">
     android:layout_below="@+id/t1"
     android:layout_toRightOf="@+id/t2"
     android:layout_toEndOf="@+id/t2"
-    android:background="@drawable/borderbottom"/>
+    android:background="@drawable/buttonshape"/>
 </RelativeLayout>
     </LinearLayout>

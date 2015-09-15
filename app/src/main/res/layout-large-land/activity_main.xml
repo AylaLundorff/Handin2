@@ -29,7 +29,7 @@
             android:textStyle="bold"
             android:gravity="center"
             android:padding="8dp"
-            android:background="@drawable/borderbottom"
+            android:background="@drawable/buttonshape"
             android:layout_width="fill_parent"
             android:layout_weight="1"
             />
@@ -41,7 +41,7 @@
             android:textStyle="bold"
             android:gravity="center"
             android:padding="8dp"
-            android:background="@drawable/borderbottom"
+            android:background="@drawable/buttonshape"
             android:layout_weight="1"
             />
         <Button
@@ -52,7 +52,7 @@
             android:textStyle="bold"
             android:gravity="center"
             android:padding="8dp"
-            android:background="@drawable/borderbottom"
+            android:background="@drawable/buttonshape"
             android:layout_weight="1"
             />
     </TableRow>

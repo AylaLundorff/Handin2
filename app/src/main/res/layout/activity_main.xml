@@ -9,18 +9,18 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:id="@+id/mainlayout"
-    android:background="@drawable/landscape_background_bm">
+    android:background="@drawable/landscape_background_bm_cropped">
 
     <ImageView
-    android:layout_width="wrap_content"
+    android:layout_width="fill_parent"
     android:layout_height="350dp"
     android:id="@+id/t6"
     android:layout_gravity="center_horizontal"
     android:layout_marginTop="-30dp"
-    android:src="@drawable/logo_resized" />
+    android:src="@drawable/logo_resized"/>
 
-<ImageView
-    android:layout_width="wrap_content"
+    <ImageView
+    android:layout_width="fill_parent"
     android:layout_height="100dp"
     android:layout_marginTop="-70dp"
     android:src="@drawable/whentimematters_v2"
@@ -28,42 +28,51 @@
 
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="fill_parent">
     <Button
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
         android:id="@+id/t1"
         android:text="@string/button_login"
-        android:textSize="18sp"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:gravity="center"
-        android:padding="9dp"
-        android:layout_marginTop="35dp"
-        android:background="@drawable/borderbottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0.5"
+        android:shadowDy="0.5"
+        android:shadowRadius="5"
         />
     <Button
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
         android:id="@+id/t2"
         android:text="@string/button_register"
-        android:layout_below="@+id/t1"
-        android:textSize="18sp"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:gravity="center"
-        android:background="@drawable/borderbottom"/>
-    <Button
-        android:layout_width="195dp"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
+        android:layout_below="@id/t1"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0.5"
+        android:shadowDy="0.5"
+        android:shadowRadius="5"
+        />
+    <Button
         android:id="@+id/t3"
         android:text="@string/button_about"
-        android:textSize="18sp"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:gravity="center"
-        android:layout_below="@+id/t1"
-        android:layout_toRightOf="@+id/t2"
-        android:background="@drawable/borderbottom"/>
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/t1"
+        android:layout_toRightOf="@id/t2"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0.5"
+        android:shadowDy="0.5"
+        android:shadowRadius="5"
+        />
 </RelativeLayout>
 </LinearLayout>

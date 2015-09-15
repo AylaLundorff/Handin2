@@ -33,7 +33,7 @@
         android:text="@string/abouttext"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="115dp"
         android:layout_marginBottom="15dp"/>
     <Button
         android:layout_height="wrap_content"
@@ -46,6 +46,6 @@
         android:textStyle="bold"
         android:gravity="center"
         android:padding="7dp"
-        android:background="@drawable/borderbottom"/>
+        android:background="@drawable/buttonshape"/>
 
 </RelativeLayout>
