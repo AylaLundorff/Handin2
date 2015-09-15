@@ -30,7 +30,7 @@
 
             <Button
                 android:id="@+id/t2"
-                android:text="@string/button_register"
+                android:text="@string/button_email"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 android:textStyle="bold"
