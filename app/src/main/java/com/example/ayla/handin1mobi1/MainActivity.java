@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.Toast;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,10 +27,22 @@ public class MainActivity extends AppCompatActivity {
     private TableLayout mainlayoutland;
 
     private static final int CONSTANT_COLORREQUESTCODE = 1;
+    private static final String MY_PREFERENCES = "MY_PREFERENCES";
+    private static final String MY_COLORPREFERENCES = "MY_COLORPREFERENCES";
+
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (savedInstanceState != null) {
+            Log.d(TAG, "OnCreate() Restoring previous state");
+            /* restore state */
+        } else {
+            Log.d(TAG, "OnCreate() No saved state available");
+            /* initialize app */
+        }
+
         setContentView(R.layout.activity_main);
 
         //Instantiate views
@@ -135,4 +148,30 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        // save the instance variables
+        SharedPreferences prefs = getSharedPreferences(MY_PREFERENCES, MODE_PRIVATE);
+        SharedPreferences.Editor edit = prefs.edit();
+        edit.putString(MY_COLORPREFERENCES, "returnvalue");
+        edit.apply();
+    }
+
+/*
+    @Override
+    public void onResume() {
+        super.onResume();
+        //get shared preferences
+        SharedPreferences prefs = getSharedPreferences(MY_PREFERENCES, MODE_PRIVATE);
+        //Retrieve values
+        String
+        //get the instance variables
+                white_color = savedColor.getInt("white", white_color);
+        gray_color = savedColor.getInt("gray", gray_color);
+        black_color = savedColor.getInt("blue", black_color);
+    }
+    */
+
 }
